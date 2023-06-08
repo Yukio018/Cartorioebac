@@ -130,53 +130,65 @@ int main()
 {
 	int opcao = 0;  //definindo variáveis
 	int x = 1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	
-	for(x = 1; x = 1;)
+	printf("---Registro de Alunos EBAC--- \n\n");
+	printf("Login de administrador! \n\n Digite a sua senha:");
+	scanf("%s", senhadigitada);
+
+	comparacao = strcmp(senhadigitada, "admin"); //strcmp compara as duas strings e se caso ambas forem iguais ela retorna 0.
+	
+	if(comparacao == 0)
 	{
-		
 		system("cls");
 	
-	
-		setlocale(LC_ALL, "Portuguese"); // definindo linguagem
-	
-		printf("---Registro de Alunos EBAC--- \n\n");
-		printf("Escolha a opção desejada do menu: \n\n");
-		printf("\t 1- Registrar Usuário \n");               // \t indica um espaço de parágrafo
-		printf("\t 2- Consultar Usuário \n");
-		printf("\t 3- Deletar Usuário \n");
-		printf("\t 4- Sair do Sistema \n\n\n\n");
-		printf("Opção:");
-		
-		scanf("%d", &opcao); //armazenando a escolha do usuário
-		
-		system("cls"); //responsável por limpar a tela
-		
-		
-		switch(opcao) //inicio da seleção menu
+		for(x = 1; x = 1;)
 		{
-			case 1:
-				registro();  //chamada de funções
-				break;
-				
-			case 2:
-				consulta();
-				break;
-				
-			case 3:
-				deletar();
-				break;
-				
-			case 4:
-				printf("Obrigado por utilizar o sistema! \n");
-				return 0;
-				break;
-				
-			default:
-				printf("Opção não disponível \n");
-				system("pause");
-				break;
-				
-		}   //fim da seleção
+		
+			system("cls");
+	
+		
+			setlocale(LC_ALL, "Portuguese"); // definindo linguagem
+		
+			printf("---Registro de Alunos EBAC--- \n\n");
+			printf("Escolha a opção desejada do menu: \n\n");
+			printf("\t 1- Registrar Usuário \n");               // \t indica um espaço de parágrafo
+			printf("\t 2- Consultar Usuário \n");
+			printf("\t 3- Deletar Usuário \n");
+			printf("\t 4- Sair do Sistema \n\n\n\n");
+			printf("Opção:");
+			
+			scanf("%d", &opcao); //armazenando a escolha do usuário
+			
+			system("cls"); //responsável por limpar a tela
+			
+			
+			switch(opcao) //inicio da seleção menu
+			{
+				case 1:
+					registro();  //chamada de funções
+					break;
+					
+				case 2:
+					consulta();
+					break;
+					
+				case 3:
+					deletar();
+					break;
+					
+				case 4:
+					printf("Obrigado por utilizar o sistema! \n");
+					return 0;
+					break;
+					
+				default:
+					printf("Opção não disponível \n");
+					system("pause");
+					break;
+					
+			}   //fim da seleção
 		
 		
 		//outra opção com mais "ifs", é menos usado pois pode exigir mais do processamento em grandes sistemas
@@ -204,9 +216,12 @@ int main()
 			system("pause");
 		}
 		*/
-	
-	}	
-	
+			}
+		}	
+
+	else
+		printf("Senha incorreta!");
+		
 
 	//printf("Esse Software pertence a Gustavo Yukio Assaoka\n");
 }
