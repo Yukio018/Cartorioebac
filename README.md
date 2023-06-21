@@ -1,2 +1,2 @@
-# Cartorioebac
-Projeto do curso de TI da Ebac
+# Projetos EBAC
+Projetos do curso de TI, Analista de dados e Cientista de dados da EBAC
